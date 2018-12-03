@@ -194,10 +194,12 @@ public class OverflowPagerIndicator extends LinearLayout {
 
 	private void addIndicator(boolean isOverflowState, int indicatorSize, int margin) {
 		View view = new View(getContext());
-		view.setBackgroundResource(R.drawable.dot);
+		
 		if (isOverflowState) {
+			view.setBackgroundResource(R.drawable.dot_inactive);
 			animateViewScale(view, STATE_SMALLEST);
 		} else {
+			view.setBackgroundResource(R.drawable.dot_active);
 			animateViewScale(view, STATE_NORMAL);
 		}
 
